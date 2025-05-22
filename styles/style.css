@@ -82,6 +82,7 @@ ol {
 
 /* Контейнер с видео */
 .result__video-container {
+  position: relative;
   width: 711px;
   height: 386px;
 }
@@ -190,6 +191,9 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 /* Стилизация чекбокса при навидении */
 .search-form__checkbox-list .search-form__label:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
   cursor: pointer;
 }
 
@@ -254,6 +258,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 
 /* Контейнер для карточек */
 .content__list-container {
+  position: relative;
   height: 298px;
   overflow-y: scroll;
 }
@@ -266,17 +271,46 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   width: 390px;
 }
 
+/* Отступ для последней карточки */
+.content__list-item:last-child {
+  margin-bottom: 30px;
+}
+
+/* Ссылка карточки */
+.content__card-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Стилизация ссылки карточки когда она активна */
+.content__card-link_current {
+  background-color: #545050;
+}
+
+/* Стилизация ссылки карточки при наведении */
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
+}
+
+/* Сброс фокуса ссылки карточки */
+.content__card-link:focus {
+  outline: none;
+}
+
+/* Стилизация ссылки карточки при фокусе с клавиатуры */
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
 /* Карточка */
 .content__video-card {
   display: flex;
   width: 390px;
   height: 103px;
-}
-
-/* Ссылка карточки */
-.content__card-link {
-  color: #fff;
-  text-decoration: none;
 }
 
 /* Контейнер для заголовка и описания карточки */
@@ -306,7 +340,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 
@@ -320,5 +354,5 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 
 /* Кнопка показать больше */
 .more-button {
-  width: 100%;
+  width: 390px;
 }
