@@ -85,6 +85,7 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
+  margin-bottom: 19px;
 }
 
 /* Видео */
@@ -99,18 +100,22 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-bottom: 5px;
 }
 
 /* Групировки формы */
 .search-form__fieldset {
+  align-self: flex-start;
   border: none;
 }
 
 /* Заголовоки полей формы */
 .search-form__fieldset-title {
+  margin-bottom: 5px;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
+  line-height: 100%;
 }
 
 /* Текстовое поле формы */
@@ -125,6 +130,7 @@ ol {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
+  line-height: 100%;
   background-color: transparent;
   appearance: none;
 }
@@ -132,6 +138,7 @@ ol {
 /* Подсказка текстового поля формы */
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
+  line-height: 100%;
 }
 
 /* Сброс стилей обводки у фокусного состояния текстового поля */
@@ -154,9 +161,9 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  width: 212px;
 }
 
+/* Подпись */
 .search-form__label {
   display: flex;
   gap: 5px;
@@ -186,6 +193,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
+  line-height: 100%;
 }
 
 /* Стилизация чекбокса при навидении */
@@ -205,6 +213,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-size: 18px;
+  line-height: 100%;
   background-color: transparent;
 }
 
@@ -244,10 +253,12 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 
 /* Заголовок */
 .title {
+  margin-bottom: 26px;
   color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
+  line-height: 94%;
   text-transform: uppercase;
 }
 
@@ -260,6 +271,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 .content__list-container {
   position: relative;
   height: 298px;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -269,6 +281,10 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   justify-content: start;
   gap: 30px;
   width: 390px;
+}
+
+.content__list-item {
+  padding: 0 3px;
 }
 
 /* Отступ для последней карточки */
@@ -321,6 +337,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 /* Заголовок карточки */
 .content__video-card-title {
   width: 196px;
+  margin-bottom: 6px;
   overflow: hidden;
   font-family: Oswald, sans-serif;
   font-weight: 700;
@@ -340,6 +357,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
+  line-height: 16.2px;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
@@ -354,5 +372,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 
 /* Кнопка показать больше */
 .more-button {
-  width: 390px;
+  width: calc(100% - 6px);
+  margin: 0px 3px 5px 3px;
 }
