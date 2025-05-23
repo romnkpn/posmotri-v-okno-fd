@@ -93,6 +93,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 /* Форма */
@@ -120,8 +121,8 @@ ol {
 
 /* Текстовое поле формы */
 .search-form__textfield {
-  width: 225px;
-  height: 27px;
+  min-width: 225px;
+  min-height: 27px;
   border-top: 1px solid #fff;
   border-right: 1px solid transparent;
   border-bottom: 1px solid #fff;
@@ -160,7 +161,9 @@ ol {
 /* Чекбоксы формы */
 .search-form__checkbox-list {
   display: flex;
+  align-items: center;
   gap: 15px;
+  min-height: 22px;
 }
 
 /* Подпись */
@@ -205,9 +208,14 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   cursor: pointer;
 }
 
+/* Сброс подчеркивания при активном чекбоксе */
+.search-form__checkbox-list .search-form__label:active {
+  text-decoration: none;
+}
+
 /* Общие стили кнопок */
 .button {
-  height: 34px;
+  min-height: 34px;
   border: 1px solid #fff;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -217,15 +225,16 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   background-color: transparent;
 }
 
-/* Стилизация кнопки когда активна */
-.button:active {
-  background-color: #545050;
-}
-
 /* Стилизация кнопки при наведении */
 .button:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* Стилизация кнопки когда активна */
+.button:active {
+  text-decoration: none;
+  background-color: #545050;
 }
 
 /* Стилизация кнопки в фокусе */
@@ -272,7 +281,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   position: relative;
   height: 298px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 /* Список карточек */
@@ -285,11 +294,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 
 .content__list-item {
   padding: 0 3px;
-}
-
-/* Отступ для последней карточки */
-.content__list-item:last-child {
-  margin-bottom: 30px;
 }
 
 /* Ссылка карточки */
@@ -373,5 +377,5 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 /* Кнопка показать больше */
 .more-button {
   width: calc(100% - 6px);
-  margin: 0px 3px 5px 3px;
+  margin: 33px 3px 5px 3px;
 }
